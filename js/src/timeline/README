@@ -3,6 +3,10 @@ CHAP Links Network
 http://www.almende.com
 http://almende.github.com/chap-links-library/
 
+IMPORTANT NOTE
+
+**DO NOT** modify the DniDate.js file included in this project. To make changes to DniDate, you should check out the [dni-date-converter](https://github.com/alahmnat/dni-date-converter) repository and make your changes there, then copy the file back into this repository. (Using a git submodule or subtree to address this dependency is just overkill for this little project.)
+
 DESCRIPTION
 
 The Timeline is an interactive visualization chart to visualize events in time. 
@@ -34,12 +38,13 @@ USAGE
 The Timeline is no built-in visualization of Google. To load the Timeline, 
 download the file timeline.zip and unzip it in a sub directory timeline on your 
 html page. Include the google API and the two downloaded files in the head of 
-your html code:
+your html code, as well as the DniDate.js file:
 
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="timeline/DniDate.js"></script>
     <script type="text/javascript" src="timeline/timeline.js"></script>
     <link rel="stylesheet" type="text/css" href="timeline/timeline.css">
-    
+
 The google visualization needs to be loaded in order to use DataTable.
 
     google.load("visualization", "1");
